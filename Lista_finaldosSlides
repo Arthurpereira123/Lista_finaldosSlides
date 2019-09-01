@@ -1,0 +1,24 @@
+package lista2;
+import javax.swing.JOptionPane;
+
+public class Lista2 {
+     String nome;
+     int idade;
+     
+    public static void main(String[] args) {
+         String nome = JOptionPane.showInputDialog("Qual seu nome?");
+         String txt = JOptionPane.showInputDialog(null, "Qual a sua idade?", "Pesquisa", JOptionPane.QUESTION_MESSAGE);
+         int idade = Integer.parseInt(txt);
+         
+         if (idade >= 18){
+            String message = String.format("Você já pode tirar a CNH!");
+            JOptionPane.showMessageDialog(null, message);
+         }
+         else{
+             String mensagem = String.format ("Você ainda não pode tirar a CNH, você tem apenas %s!", idade + " anos");
+             JOptionPane.showMessageDialog(null, mensagem);
+         }
+         
+    }
+    
+}
